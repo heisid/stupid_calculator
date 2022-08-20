@@ -91,12 +91,11 @@ function calculate() {
 
 function resPress() {
     buffer = [];
+    // noinspection FallThroughInSwitchStatementJS
     switch (stack.length) {
-        case 1:
-            render(stack[0]);
-            break;
         case 2:
             stack.pop();
+        case 1:
             render(stack[0]);
             break;
         case 3:
